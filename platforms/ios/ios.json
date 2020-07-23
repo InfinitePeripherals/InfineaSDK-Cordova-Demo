@@ -1,0 +1,77 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"InfineaSDKCordova\"><param name=\"ios-package\" value=\"InfineaSDKCordova\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "UISupportedExternalAccessoryProtocols": [
+            {
+              "xml": "<array><string>com.datecs.linea.pro.msr</string><string>com.datecs.iserial.communication</string><string>com.datecs.pinpad</string><string>com.datecs.linea.pro.bar</string><string>com.datecs.printer.escpos</string></array>",
+              "count": 1
+            }
+          ],
+          "NSBluetoothPeripheralUsageDescription": [
+            {
+              "xml": "<string>This app uses bluetooth to connect to IPC scanner and printer devices.\n            </string>",
+              "count": 1
+            }
+          ],
+          "NSLocationAlwaysAndWhenInUseUsageDescription": [
+            {
+              "xml": "<string>This app uses location to determine whether the enterpise device is being used in a restricted geographic.\n            </string>",
+              "count": 1
+            }
+          ],
+          "NSLocationAlwaysUsageDescription": [
+            {
+              "xml": "<string>This app uses location to determine whether the enterpise device is being used in a restricted geographic.\n            </string>",
+              "count": 1
+            }
+          ],
+          "NSLocationWhenInUseUsageDescription": [
+            {
+              "xml": "<string>This app uses location to determine whether the enterpise device is being used in a restricted geographic.\n            </string>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-infineasdk": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-infineasdk.InfineaSDKCordova",
+      "file": "plugins/cordova-plugin-infineasdk/www/InfineaSDKCordova.js",
+      "pluginId": "cordova-plugin-infineasdk",
+      "clobbers": [
+        "Infinea"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.4",
+    "cordova-plugin-infineasdk": "1.0.13"
+  }
+}
